@@ -37,8 +37,6 @@
 import { useState } from "react";
 import ColorInput from "./components/ColorInput";
 import ContrastResult from "./components/ContrastResult";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 function App() {
   const [fgColor, setFgColor] = useState("#000000"); // Default black
@@ -46,10 +44,8 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center p-4 bg-gray-100">
-      <Header />
       <ColorInput fgColor={fgColor} setFgColor={setFgColor} bgColor={bgColor} setBgColor={setBgColor} />
       <ContrastResult fgColor={fgColor} bgColor={bgColor} />
-      <Footer />
     </div>
   );
 }
